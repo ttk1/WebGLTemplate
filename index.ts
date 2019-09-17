@@ -10,7 +10,7 @@ window.onload = () => {
   gl.clear(gl.COLOR_BUFFER_BIT);
 
   // Step 3 シェーダプログラムの設定
-  function getShader(type, source) {
+  function getShader(type: number, source: string) {
     const shader = gl.createShader(type);
     gl.shaderSource(shader, source);
     gl.compileShader(shader);
