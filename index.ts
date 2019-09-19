@@ -29,8 +29,8 @@ window.onload = () => {
   gl.attachShader(program, fragmentShader);
   gl.linkProgram(program);
 
-  // Step 4 VBOにデータの転送
-  function transferData(data, loc) {
+  // Step 4 VBOへデータの転送
+  function transferData(data: number[], loc: number) {
     gl.enableVertexAttribArray(loc);
     const buf = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buf);
